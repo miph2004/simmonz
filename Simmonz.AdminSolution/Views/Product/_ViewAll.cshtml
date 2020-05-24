@@ -1,0 +1,75 @@
+﻿@using Simmonz.ViewModel.Common;
+@model PagedResult<Simmonz.ViewModel.Product.ProductViewModel>
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead>
+
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    Tên
+                </th>
+                <th>
+                    Danh mục
+                </th>
+                <th>
+                    Hình ảnh
+                </th>
+                <th>
+                    Gía
+                </th>
+                <th>
+                    Số lượng
+                </th>
+                <th>
+                    Mô tả
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CategoryName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Image)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Quantity)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        <a onclick="showInPopUp('@Url.Action("Update","Product",new { productId=item.Id},Context.Request.Scheme)',' Cập nhật')" class="btn btn-outline-info">
+                            Cập nhật
+                        </a>
+                        <a onclick="showInPopUp('@Url.Action("Details","Product",new { productId=item.Id},Context.Request.Scheme)',' Chi tiết sản phẩm')" class="btn btn-outline-light">
+                            Chi tiết
+                        </a>
+                        <form asp-action="Delete" asp-route-productId="@item.Id" class="d-inline" onsubmit="return jQueryAjaxDelete(this)">
+                            <input type="submit" value="Xóa" class="btn btn-danger" />
+                        </form>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+</div>
+

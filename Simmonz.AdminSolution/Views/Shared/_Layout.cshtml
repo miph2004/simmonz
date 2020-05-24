@@ -64,12 +64,12 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>Tin tức</span>
+                    <span>Đơn hàng</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Quản lý tin tức</h6>
-                        <a class="collapse-item" href="/Content/Index">Danh sách tin tứcc</a>
+                        <h6 class="collapse-header">Quản lý đơn hàng</h6>
+                        <a class="collapse-item" href="/Order/Index">Danh sách đơn hàng</a>
                         <a class="collapse-item" href="/Content/Create">Tạo tin tức</a>
 
                     </div>
@@ -299,7 +299,7 @@
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Thông tin
                                 </a>
-                                
+
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Cài đặt
@@ -313,9 +313,9 @@
                                     <button type="submit" class="dropdown-item" value="Logout">Đăng xuất</button>
                                 </form>
                                 @*<a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-            Logout
-        </a>*@
+                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Logout
+                                    </a>*@
                             </div>
                         </li>
 
@@ -335,7 +335,7 @@
 
                     <!-- Page Heading -->
                     <!--Content-->
-                    @RenderSection("header", required: true)
+                    @RenderBody()
                     <!--End Content-->
 
                 </div>
@@ -381,13 +381,29 @@
             </div>
         </div>
     </div>
-
+    <!--Modal Dialog-->
+    <div class="modal" tabindex="-1" role="dialog" id="form-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Modal-->
     <!-- Bootstrap core JavaScript-->
     <script src="~/vendor/jquery/jquery.min.js"></script>
     <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Core plugin JavaScript-->
     <script src="~/vendor/jquery-easing/jquery.easing.min.js"></script>
-
+    <script src="~/js/site.js"></script>
     <!-- Custom scripts for all pages-->
 
     <script src="~/js/sb-admin-2.min.js"></script>
@@ -395,12 +411,22 @@
         <script src="~/Assets/Admin/plugin/ckeditor/ckeditor.js"></script>*@
     <script>
         //AlertBox
-        $('#AlertBox').removeClass('hide');
-        $('#AlertBox').delay(1000).slideUp(500);
+        $('#msgAlert').removeClass('hide');
+        $('#msgAlert').delay(1000).slideUp(500);
+    </script>
+    @*//Upload image*@
+    <script>
+        $(document).ready(function () {
+            $('.custom-file-input').on("change", function () {
+                var fileName = $(this).val().split("\\").pop();
+                $(this).next('.custom-file-label').html(fileName);
+            });
+        });
     </script>
     @*<script src="~/Assets/Admin/vendor/datatables/jquery.dataTables.min.js"></script>
         <script src="~/Assets/Admin/vendor/datatables/dataTables.bootstrap4.min.js"></script>
         <script src="~/Assets/Admin/js/demo/datatables-demo.js"></script>*@
     @RenderSection("jsFooter", required: false)
+
 </body>
 </html>

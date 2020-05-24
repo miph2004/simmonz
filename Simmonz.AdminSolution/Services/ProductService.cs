@@ -18,20 +18,22 @@ namespace Simmonz.AdminSolution.Services
             _context = context;
         }
 
-        public async Task<int> CreateProduct(ProductCreateRequest request)
+        public async Task<ApiResult<bool>> CreateProduct(ProductCreateRequest request,string fileName)
         {
-            var product = new Product()
+            var productResult = new Product()
             {
                 ProductName = request.ProductName,
                 Price = request.Price,
+                DiscountId=request.DiscountId,
                 CategoryId = request.CategoryId,
-                Image = request.Image,
+                Image = fileName,
                 Description = request.Description,
                 Quantity = request.Quantity,
                 CreatedDate = DateTime.Now,
             };
-            _context.Products.Add(product);
-            return await _context.SaveChangesAsync();
+            _context.Products.Add(productResult);
+             await _context.SaveChangesAsync();
+            return new ApiSuccessResult<bool>();
         }
 
         public async Task<List<ProductViewModel>> GetAll()
@@ -40,34 +42,97 @@ namespace Simmonz.AdminSolution.Services
                         select new { p };
             var data = await query.Select(x => new ProductViewModel()
             {
-                ProductName=x.p.ProductName,
-                Price=x.p.Price,
-                CategoryId=x.p.CategoryId,
-                Quantity=x.p.Quantity,
-               Description=x.p.Description,
+                ProductName = x.p.ProductName,
+                Price = x.p.Price,
+                CategoryId = x.p.CategoryId,
+                Quantity = x.p.Quantity,
+                Description = x.p.Description,
             }).ToListAsync();
             return data;
         }
 
-        public Task<PagedResult<ProductViewModel>> GetAllPaging(GetProductRequest request)
+        public async Task<ApiResult<PagedResult<ProductViewModel>>> GetAllPaging(GetProductPagingRequest request)
         {
-            throw new NotImplementedException();
+            var query = from p in _context.Products
+                        join c in _context.Categories on p.CategoryId equals c.Id
+                        select new { p, c };
+            if (!string.IsNullOrEmpty(request.Keyword))
+                query = query.Where(x => x.p.ProductName.Contains(request.Keyword));
+
+
+            //3. Paging
+            int totalRow = await query.CountAsync();
+
+            var data = await query.Skip((request.pageIndex - 1) * request.pageSize)
+                 .Take(request.pageSize)
+                 .Select(x => new ProductViewModel()
+                 {
+                     Id=x.p.Id,
+                     ProductName = x.p.ProductName,
+                     Price = x.p.Price,
+                     CategoryName=x.c.Name,
+                     Image=x.p.Image,
+                     CategoryId = x.p.CategoryId,
+                     DiscountId=x.p.DiscountId,
+                     Quantity = x.p.Quantity,
+                     Description = x.p.Description,
+                 }).ToListAsync();
+
+
+            //4. Select and projection
+            var pagedResult = new PagedResult<ProductViewModel>()
+            {
+                TotalRecords = totalRow,
+                pageIndex = request.pageIndex,
+                pageSize = request.pageSize,
+                Items = data,
+                
+            };
+            return new ApiSuccessResult<PagedResult<ProductViewModel>>(pagedResult);
         }
 
-        public async Task<ProductViewModel> GetProductById(int productId)
+        public async Task<ApiResult<ProductViewModel>> GetProductById(int productId)
         {
-            var product = await _context.Products.FindAsync(productId);
+            var product = await _context.Products.Include(i => i.Category).FirstOrDefaultAsync(i => i.Id == productId);
             var productViewDetail = new ProductViewModel()
             {
                 Id = product.Id,
                 ProductName = product.ProductName,
                 Price = product.Price,
                 CategoryId = product.CategoryId,
+                CategoryName=product.Category.Name,
                 Description = product.Description,
                 Image = product.Image,
+                DiscountId=product.DiscountId,
                 Quantity = product.Quantity,
             };
-            return productViewDetail;
+            return new ApiSuccessResult<ProductViewModel>(productViewDetail);
         }
+
+        public async Task<ApiResult<bool>> UpdateProduct(ProductUpdateRequest request,string fileName)
+        {
+            var product = await _context.Products.FindAsync(request.Id);
+            if (product == null) throw new Exception($"Cannot find product with id :{request.Id}");
+            product.ProductName = request.ProductName;
+            product.Price = request.Price;
+            product.Quantity = request.Quantity;
+            product.Image = fileName;
+            product.Id = request.Id;
+            product.CategoryId = request.CategoryId;
+            product.DiscountId = request.DiscountId;
+            product.Description = request.Description;
+             await _context.SaveChangesAsync();
+            return new ApiSuccessResult<bool>();
+        }
+
+        public async Task<ApiResult<bool>> DeleteProduct(int productId)
+        {
+            var product = await _context.Products.FindAsync(productId);
+            if (product == null) return new ApiErrorResult<bool>("Không tìm thấy sản phẩm");
+             _context.Products.Remove(product);
+            await _context.SaveChangesAsync();
+            return new ApiSuccessResult<bool>();
+        }
+
     }
 }

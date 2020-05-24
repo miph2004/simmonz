@@ -44,6 +44,14 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                     </div>
+                                    <div class="col-md-12">
+                                        @if (ViewBag.FaliedAlert != null)
+                                        {
+                                            <div id="msgAlert" class="alert alert-danger" role="alert">
+                                                @ViewBag.FaliedAlert
+                                            </div>
+                                        }
+                                    </div>
 
                                     <form class="user" asp-action="Index" asp-controller="Login" method="post">
                                         <div class="form-group">
@@ -97,7 +105,11 @@
 
     <!-- Custom scripts for all pages-->
     <script src="~/js/sb-admin-2.min.js"></script>
-
+    <script>
+        //AlertBox
+        $('#msgAlert').removeClass('hide');
+        $('#msgAlert').delay(1000).slideUp(500);
+    </script>
 </body>
 
 </html>

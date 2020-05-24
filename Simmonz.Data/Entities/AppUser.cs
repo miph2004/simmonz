@@ -10,5 +10,6 @@ namespace Simmonz.Data.Entities
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime DayOfBirth { get; set; }
+        public AppRole AppRole { get; set; }
     }
 }

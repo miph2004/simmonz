@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Simmonz.AdminSolution.Services;
+using Simmonz.AdminSolution.Services.Order;
 using Simmonz.Data.EF;
 using Simmonz.Data.Entities;
 
@@ -49,6 +50,8 @@ namespace Simmonz.AdminSolution
             services.AddTransient<SignInManager<AppUser>, SignInManager<AppUser>>();
             services.AddTransient<RoleManager<AppRole>, RoleManager<AppRole>>();
             services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IRoleService, RoleService>();
+            services.AddTransient<IOrderService, OrderService>();
 
             services.AddControllersWithViews();
             services.AddSession(options =>

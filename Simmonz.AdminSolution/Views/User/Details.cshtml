@@ -1,0 +1,40 @@
+﻿@model Simmonz.ViewModel.User.UserViewModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = null;
+}
+
+    <dl class="row">
+        <dt class="col-md-3">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class="col-md-9">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class="col-md-3">
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd class="col-md-9">
+            @Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt class="col-md-3">
+            @Html.DisplayNameFor(model => model.DayOfBirth)
+        </dt>
+        <dd class="col-md-9">
+            @Html.DisplayFor(model => model.DayOfBirth)
+        </dd>
+        <dt class="col-md-3">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-md-9">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class="col-md-3">
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+        <dd class="col-md-9">
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+    </dl>
+</div>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
@@ -11,8 +12,10 @@ namespace Simmonz.ViewModel.Product
         public string ProductName { get; set; }
         [DisplayName("Danh mục")]
         public int CategoryId { get; set; }
+        [DisplayName("Giam gia ")]
+        public int DiscountId { get; set; }
         [DisplayName("Hình ảnh")]
-        public string Image { get; set; }
+        public IFormFile Image { get; set; }
 
         [DisplayName("Gía")]
 

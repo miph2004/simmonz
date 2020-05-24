@@ -1,0 +1,54 @@
+﻿@model Simmonz.ViewModel.Product.ProductViewModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = null ;
+    var imagePath = "/img/"+ Model.Image;
+}
+
+    <div>
+        <dl class="row">
+            <dt class="col-md-3">
+                @Html.DisplayNameFor(model => model.Id)
+            </dt>
+            <dd  class="col-md-9">
+                @Html.DisplayFor(model => model.Id)
+            </dd>
+            <dt  class="col-md-4">
+                @Html.DisplayNameFor(model => model.ProductName)
+            </dt>
+            <dd class="col-md-8">
+                @Html.DisplayFor(model => model.ProductName)
+            </dd>
+            <dt  class="col-md-3">
+                @Html.DisplayNameFor(model => model.CategoryName)
+            </dt>
+            <dd  class="col-md-9">
+                @Html.DisplayFor(model => model.CategoryName)
+            </dd>
+            <dt  class="col-md-3">
+                @Html.DisplayNameFor(model => model.Image)
+            </dt>
+            <dd  class="col-md-9">
+                <img style="width:200px" id="img" src="@imagePath" />
+            </dd>
+            <dt  class="col-md-3">
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+            <dd  class="col-md-9">
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+            <dt  class="col-md-3">
+                @Html.DisplayNameFor(model => model.Quantity)
+            </dt>
+            <dd  class="col-md-9">
+                @Html.DisplayFor(model => model.Quantity)
+            </dd>
+            <dt  class="col-md-3">
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+            <dd  class="col-md-6">
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+        </dl>
+    </div>

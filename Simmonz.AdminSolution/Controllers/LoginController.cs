@@ -29,7 +29,10 @@ namespace Simmonz.AdminSolution.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-           
+           if(TempData["resultFailed"]!=null)
+            {
+                ViewBag.FaliedAlert = TempData["resultFailed"];
+            }    
             return View();
         }
         [HttpPost]
@@ -39,20 +42,25 @@ namespace Simmonz.AdminSolution.Controllers
                 return View(ModelState);
 
             var result = await _userService.Authenticate(request);
-
-            var userPrincipal = this.ValidateToken(result.ResultObject);
-            var authProperties = new AuthenticationProperties
+            if(result.IsSucceed)
             {
-                ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(10),
-                IsPersistent = false
-            };
-            HttpContext.Session.SetString("Token", result.ResultObject);
-            await HttpContext.SignInAsync(
-                        CookieAuthenticationDefaults.AuthenticationScheme,
-                        userPrincipal,
-                        authProperties);
+                var userPrincipal = this.ValidateToken(result.ResultObject);
+                var authProperties = new AuthenticationProperties
+                {
+                    ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(10),
+                    IsPersistent = false
+                };
+                HttpContext.Session.SetString("Token", result.ResultObject);
+                await HttpContext.SignInAsync(
+                            CookieAuthenticationDefaults.AuthenticationScheme,
+                            userPrincipal,
+                            authProperties);
 
-            return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Home");
+            }
+            TempData["resultFailed"] = result.Message;
+            return RedirectToAction("Index");
+            
 
         }
         private ClaimsPrincipal ValidateToken(string jwtToken)

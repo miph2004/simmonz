@@ -20,11 +20,15 @@ namespace Simmonz.Data.EF
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new ProductConfigConfiguration());
-
+            modelBuilder.ApplyConfiguration(new ProductConfiguration());
+            modelBuilder.ApplyConfiguration(new CategoryConfiguration());
+            modelBuilder.ApplyConfiguration(new ClientConfiguration());
+            modelBuilder.ApplyConfiguration(new DiscountConfiguration());
+            modelBuilder.ApplyConfiguration(new OrderConfiguration());
             modelBuilder.ApplyConfiguration(new AppRoleConfiguration());
             modelBuilder.ApplyConfiguration(new AppUserConfiguration());
-
+            modelBuilder.ApplyConfiguration(new ShippingFeeConfiguration());
+            modelBuilder.ApplyConfiguration(new TransactionConfiguration());
             //App Userr
             modelBuilder.Entity<IdentityUserClaim<int>>().ToTable("AppUserClaims");
             modelBuilder.Entity<IdentityUserRole<int>>().ToTable("AppUserRoles").HasKey(x => new { x.UserId, x.RoleId });
@@ -38,6 +42,9 @@ namespace Simmonz.Data.EF
         public DbSet<Product> Products { get; set; }
         public DbSet<AppUser> AppUsers { get; set; } 
         public DbSet<AppRole> AppRoles { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Discount> Discounts { get; set; }
+        public DbSet<Order> Orders { get; set; }
 
     }
 }

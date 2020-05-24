@@ -8,5 +8,6 @@ namespace Simmonz.Data.Entities
     public class AppRole : IdentityRole<int>
     {
         public string Description { get; set; }
+        public List<AppUser> appUsers { get; set; }
     }
 }

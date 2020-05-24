@@ -8,7 +8,7 @@ namespace Simmonz.ViewModel.User
 {
     public class UserViewModel
     {
-        public int Id   { get; set; }
+        public int Id { get; set; }
         [Display(Name = "Tên")]
         public string FirstName { get; set; }
         [Display(Name = "Họ")]
@@ -20,5 +20,6 @@ namespace Simmonz.ViewModel.User
         public string Email { get; set; }
         [Display(Name = "Điện thoại")]
         public string PhoneNumber { get; set; }
-}
+        public IList<string> Roles { get; set; }
+    }
 }

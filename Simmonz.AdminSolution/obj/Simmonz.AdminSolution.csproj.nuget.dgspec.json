@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Dev\\Simmonz\\Simmonz.AdminSolution\\Simmonz.AdminSolution.csproj": {}
+    "C:\\Users\\Mint\\source\\repos\\Simmonz\\Simmonz.AdminSolution\\Simmonz.AdminSolution.csproj": {}
   },
   "projects": {
-    "D:\\Dev\\Simmonz\\Simmonz.AdminSolution\\Simmonz.AdminSolution.csproj": {
+    "C:\\Users\\Mint\\source\\repos\\Simmonz\\Simmonz.AdminSolution\\Simmonz.AdminSolution.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev\\Simmonz\\Simmonz.AdminSolution\\Simmonz.AdminSolution.csproj",
+        "projectUniqueName": "C:\\Users\\Mint\\source\\repos\\Simmonz\\Simmonz.AdminSolution\\Simmonz.AdminSolution.csproj",
         "projectName": "Simmonz.AdminSolution",
-        "projectPath": "D:\\Dev\\Simmonz\\Simmonz.AdminSolution\\Simmonz.AdminSolution.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev\\Simmonz\\Simmonz.AdminSolution\\obj\\",
+        "projectPath": "C:\\Users\\Mint\\source\\repos\\Simmonz\\Simmonz.AdminSolution\\Simmonz.AdminSolution.csproj",
+        "packagesPath": "C:\\Users\\Mint\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mint\\source\\repos\\Simmonz\\Simmonz.AdminSolution\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mint\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,11 +27,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Dev\\Simmonz\\Simmonz.Data\\Simmonz.Data.csproj": {
-                "projectPath": "D:\\Dev\\Simmonz\\Simmonz.Data\\Simmonz.Data.csproj"
+              "C:\\Users\\Mint\\source\\repos\\Simmonz\\Simmonz.Data\\Simmonz.Data.csproj": {
+                "projectPath": "C:\\Users\\Mint\\source\\repos\\Simmonz\\Simmonz.Data\\Simmonz.Data.csproj"
               },
-              "D:\\Dev\\Simmonz\\Simmonz.ViewModel\\Simmonz.ViewModel.csproj": {
-                "projectPath": "D:\\Dev\\Simmonz\\Simmonz.ViewModel\\Simmonz.ViewModel.csproj"
+              "C:\\Users\\Mint\\source\\repos\\Simmonz\\Simmonz.ViewModel\\Simmonz.ViewModel.csproj": {
+                "projectPath": "C:\\Users\\Mint\\source\\repos\\Simmonz\\Simmonz.ViewModel\\Simmonz.ViewModel.csproj"
               }
             }
           }
@@ -65,7 +65,7 @@
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[3.1.2, )"
+              "version": "[3.1.3, )"
             },
             "System.ComponentModel": {
               "target": "Package",
@@ -102,17 +102,17 @@
         }
       }
     },
-    "D:\\Dev\\Simmonz\\Simmonz.Data\\Simmonz.Data.csproj": {
+    "C:\\Users\\Mint\\source\\repos\\Simmonz\\Simmonz.Data\\Simmonz.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev\\Simmonz\\Simmonz.Data\\Simmonz.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Mint\\source\\repos\\Simmonz\\Simmonz.Data\\Simmonz.Data.csproj",
         "projectName": "Simmonz.Data",
-        "projectPath": "D:\\Dev\\Simmonz\\Simmonz.Data\\Simmonz.Data.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev\\Simmonz\\Simmonz.Data\\obj\\",
+        "projectPath": "C:\\Users\\Mint\\source\\repos\\Simmonz\\Simmonz.Data\\Simmonz.Data.csproj",
+        "packagesPath": "C:\\Users\\Mint\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mint\\source\\repos\\Simmonz\\Simmonz.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mint\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -136,6 +136,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.4, )"
@@ -188,17 +192,17 @@
         }
       }
     },
-    "D:\\Dev\\Simmonz\\Simmonz.ViewModel\\Simmonz.ViewModel.csproj": {
+    "C:\\Users\\Mint\\source\\repos\\Simmonz\\Simmonz.ViewModel\\Simmonz.ViewModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev\\Simmonz\\Simmonz.ViewModel\\Simmonz.ViewModel.csproj",
+        "projectUniqueName": "C:\\Users\\Mint\\source\\repos\\Simmonz\\Simmonz.ViewModel\\Simmonz.ViewModel.csproj",
         "projectName": "Simmonz.ViewModel",
-        "projectPath": "D:\\Dev\\Simmonz\\Simmonz.ViewModel\\Simmonz.ViewModel.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev\\Simmonz\\Simmonz.ViewModel\\obj\\",
+        "projectPath": "C:\\Users\\Mint\\source\\repos\\Simmonz\\Simmonz.ViewModel\\Simmonz.ViewModel.csproj",
+        "packagesPath": "C:\\Users\\Mint\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mint\\source\\repos\\Simmonz\\Simmonz.ViewModel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mint\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -222,6 +226,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
