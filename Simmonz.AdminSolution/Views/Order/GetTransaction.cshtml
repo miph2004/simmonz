@@ -1,0 +1,87 @@
+﻿@model Simmonz.ViewModel.Transaction.TransactionViewModel
+
+@{
+    ViewData["Title"] = "GetTransaction";
+    Layout =null;
+}
+
+
+
+<div>
+
+    <dl class="row">
+        <dt class = "col-sm-6">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class = "col-sm-6">
+            @Html.DisplayNameFor(model => model.PaymentMethod)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.PaymentMethod)
+        </dd>
+        <dt class = "col-sm-6">
+            @Html.DisplayNameFor(model => model.AddressNumber)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.AddressNumber)
+        </dd>
+        <dt class = "col-sm-6">
+            @Html.DisplayNameFor(model => model.AddressStreet)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.AddressStreet)
+        </dd>
+        <dt class = "col-sm-6">
+            @Html.DisplayNameFor(model => model.AddressDistrict)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.AddressDistrict)
+        </dd>
+        <dt class = "col-sm-6">
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+        <dt class = "col-sm-6">
+            @Html.DisplayNameFor(model => model.Message)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.Message)
+        </dd>
+        <dt class = "col-sm-6">
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+        <dt class = "col-sm-6">
+            @Html.DisplayNameFor(model => model.ShippingFeeId)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.ShippingFeeId)
+        </dd>
+        <dt class = "col-sm-6">
+            @Html.DisplayNameFor(model => model.Admin)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.Admin)
+        </dd>
+        <dt class = "col-sm-6">
+            @Html.DisplayNameFor(model => model.Client)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.Client)
+        </dd>
+        <dt class = "col-sm-6">
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+    </dl>
+</div>
+

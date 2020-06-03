@@ -134,5 +134,36 @@ namespace Simmonz.AdminSolution.Services
             return new ApiSuccessResult<bool>();
         }
 
+        public async Task<ApiResult<PagedResult<ProductViewModel>>> GetAjax(GetProductPagingRequest request)
+        {
+            var query = from p in _context.Products
+                        join c in _context.Categories on p.CategoryId equals c.Id
+                        select new { p, c };
+   
+
+            var data = await query
+                 .Select(x => new ProductViewModel()
+                 {
+                     Id = x.p.Id,
+                     ProductName = x.p.ProductName,
+                     Price = x.p.Price,
+                     CategoryName = x.c.Name,
+                     Image = x.p.Image,
+                     CategoryId = x.p.CategoryId,
+                     DiscountId = x.p.DiscountId,
+                     Quantity = x.p.Quantity,
+                     Description = x.p.Description,
+                 }).ToListAsync();
+
+
+            //4. Select and projection
+            var pagedResult = new PagedResult<ProductViewModel>()
+            {
+               
+                Items = data,
+
+            };
+            return new ApiSuccessResult<PagedResult<ProductViewModel>>(pagedResult);
+        }
     }
 }

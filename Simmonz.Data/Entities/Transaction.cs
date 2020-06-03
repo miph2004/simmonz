@@ -17,6 +17,7 @@ namespace Simmonz.Data.Entities
         public int ShippingFeeId { get; set; }
         public int AdminId { get; set; }
         public int ClientId { get; set; }
+        public DateTime CreatedDate { get; set; }
         public Admin Admin { get; set; }
         public Client Client { get; set; }
         public ShippingFee ShippingFee { get; set; }

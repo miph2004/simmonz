@@ -1,0 +1,144 @@
+﻿@using  Simmonz.ViewModel.Common
+@model PagedResult<Simmonz.ViewModel.Order.OrderViewModel>
+@{
+    ViewData["Title"] = "_ViewAll";
+    Layout = null;
+}
+
+<div class="container-fluid">
+    <h1 class="mt-4">Danh sách đơn hàng </h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+        <li class="breadcrumb-item active">Danh sách đơn hàng</li>
+    </ol>
+    <div class="card mb-4">
+        <div class="card-header">
+            <div class="row">
+               
+                <div class="col-md-6 col-xs-12">
+                    <form asp-action="Index" method="get">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <input type="text" value="@ViewBag.Keyword" name="keyword" class="form-control" />
+                            </div>
+                            <div class="cold-md-3">
+                                <button type="submit" class="btn btn-outline-primary">Tìm</button>
+                                <button type="button" onclick="window.location.href='/Order/Index'" class="btn btn-outline-secondary">Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                @if (ViewBag.SuccessMsg != null)
+                {
+                    <div id="msgAlert" class="alert alert-success" role="alert">
+                        @ViewBag.SuccessMsg
+                    </div>
+                }
+            </div>
+            <div class="table-responsive">
+
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>
+                                Mã đơn hàng
+                            </th>
+                            <th>
+                                Tổng tiền
+                            </th>
+
+                            <th>
+                                Giam giá
+                            </th>
+                            <th>
+                                Tình trạng
+                            </th>
+
+                            <th>
+                                Mã hóa đơn
+                            </th>
+                            <th>
+                                Thời gian đặt
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Items)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Id)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Amount)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Discount)
+                                </td>
+                                <td>
+                                    @if (item.Status == 0)
+                                    {
+                                        <span class="btn-outline-danger">Chưa xác nhận</span>
+                                    }
+                                    else if (item.Status == 1)
+                                    {
+                                        <span class="btn-outline-primary">Đã xác nhận</span>
+                                    }
+                                    else if (item.Status == 2)
+                                    {
+                                        <span class="btn-outline-info">Đang giao</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="btn-outline-success">Hoàn thành</span>
+                                    }
+
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.TransactionId)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem=>item.CreatedDate)
+                                </td>
+                                <td>
+
+                                    @if (item.Status == 0)
+                                    {
+                                        <form class="d-inline" asp-action="ConfirmStatus" asp-route-orderId="@item.Id" onsubmit="return jQueryConfirmOrder(this)">
+                                            <input type="submit" value="Xác nhận " class="btn btn-outline-info" />
+                                        </form>
+                                    }
+                                    else if (item.Status == 1)
+                                    {
+                                        <form class="d-inline" asp-action="ConfirmStatus" asp-route-orderId="@item.Id" onsubmit="return jQueryConfirmOrder(this)">
+                                            <input type="submit" value="Giao hàng " class="btn btn-outline-info" />
+                                        </form>
+                                    }
+                                    else if (item.Status == 2)
+                                    {
+                                        <form class="d-inline" asp-action="ConfirmStatus" asp-route-orderId="@item.Id" onsubmit="return jQueryConfirmOrder(this)">
+                                            <input type="submit" value="Hoàn thành" class="btn btn-outline-info" />
+                                        </form>
+                                    }
+                                    <a onclick="showInPopUp('@Url.Action("Details","Order",new { orderId=item.Id},Context.Request.Scheme)','Chi tiết đơn hàng')" class="btn btn-outline-info">
+                                        Chi tiết
+                                    </a>
+                                    <a onclick="showInPopUp('@Url.Action("GetTransaction","Order",new { transId=item.TransactionId},Context.Request.Scheme)','Chi tiết hóa đơn')" class="btn btn-outline-info">
+                                        Hóa đơn
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+

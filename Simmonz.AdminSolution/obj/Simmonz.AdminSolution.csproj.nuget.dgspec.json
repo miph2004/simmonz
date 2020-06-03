@@ -45,6 +45,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "FusionCharts.Visualization": {
+              "target": "Package",
+              "version": "[1.0.7, )"
+            },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
               "version": "[3.1.4, )"
@@ -136,6 +140,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "FusionCharts.Visualization": {
+              "target": "Package",
+              "version": "[1.0.7, )"
+            },
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
               "version": "[2.2.2, )"

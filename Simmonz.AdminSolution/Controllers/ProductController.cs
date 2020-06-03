@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Simmonz.AdminSolution.Helpers;
 using Simmonz.AdminSolution.Services;
 using Simmonz.Data.EF;
 using Simmonz.Data.Entities;
@@ -30,7 +31,7 @@ namespace Simmonz.AdminSolution.Controllers
 
         //http://localhost:port/product
 
-        public async Task<IActionResult> Index(string keyword, int pageIndex = 1, int pageSize = 2)
+        public async Task<IActionResult> Index(string keyword, int pageIndex = 1, int pageSize = 10)
         {
             var request = new GetProductPagingRequest()
             {
@@ -40,10 +41,6 @@ namespace Simmonz.AdminSolution.Controllers
             };
             var data = await _productService.GetAllPaging(request);
             ViewBag.Keyword = keyword;
-            if (TempData["result"] != null)
-            {
-                ViewBag.SuccessMsg = TempData["result"];
-            }
             return View(data.ResultObject);
         }
         [HttpGet]
@@ -54,25 +51,38 @@ namespace Simmonz.AdminSolution.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Create(ProductCreateRequest request)
+        public async Task<IActionResult> Create(ProductCreateRequest request,string keyword, int pageIndex =1, int pageSize = 10)
         {
                 string uniqueFileName = null;
                 var uploadFolder = Path.Combine(_hostingEnvironment.WebRootPath,"img");
+            if(request.Image.FileName==null)
+            {
+                return BadRequest("Vui lòng chọn hình ảnh ");
+            }    
                 uniqueFileName = Guid.NewGuid().ToString() + "_" + request.Image.FileName;
                 var filePath = Path.Combine(uploadFolder, uniqueFileName);
                 request.Image.CopyTo(new FileStream(filePath, FileMode.Create));
             var fileName = uniqueFileName;
-            
+            var requestView = new GetProductPagingRequest()
+            {
+                Keyword = keyword,
+                pageIndex = pageIndex,
+                pageSize = pageSize
+            };     
             var result = await _productService.CreateProduct(request, fileName);
+            var model = await _productService.GetAllPaging(requestView);
             if (result.IsSucceed)
             {
-                TempData["result"] = "Thêm mới người dùng thành công";
-                return RedirectToAction("Index");
+                TempData["result"] = "Thêm mới thành công";
+                //return RedirectToAction("Index");
+                var ajax = new { isValid = true, html = JsonHelper.RenderRazorViewToString(this, "_ViewAll", model.ResultObject) };
+                return Json(ajax);
             }
 
             ModelState.AddModelError("", result.Message);
-            return View(request);
-        } 
+            return Json(new { isValid = true, html = JsonHelper.RenderRazorViewToString(this, "_ViewAll", result.ResultObject) });
+        }
+       
         [HttpGet]
         public async Task<IActionResult> Details(int productId)
         {
@@ -85,6 +95,7 @@ namespace Simmonz.AdminSolution.Controllers
             }
             return View(result.ResultObject);
         }
+        
         [HttpGet]
         public async Task<IActionResult> Update(int productId)
         {
@@ -120,11 +131,23 @@ namespace Simmonz.AdminSolution.Controllers
             var filePath = Path.Combine(uploadFolder, uniqueFileName);
             request.Image.CopyTo(new FileStream(filePath, FileMode.Create));
             var fileName = uniqueFileName;
+            string keyword = null;
+            int pageIndex = 1;
+            int pageSize = 10;
+            var requestView = new GetProductPagingRequest()
+            {
+                Keyword = keyword,
+                pageIndex = pageIndex,
+                pageSize = pageSize
+            };
+           
             var result = await _productService.UpdateProduct(request, fileName);
+            var model = await _productService.GetAllPaging(requestView);
             if (result.IsSucceed)
             {
                 TempData["result"] = "Cập nhật người dùng thành công";
-                return RedirectToAction("Index");
+                var ajax = new { isValid = true, html = JsonHelper.RenderRazorViewToString(this, "_ViewAll", model.ResultObject) };
+                return Json(ajax);
             }
 
             ModelState.AddModelError("", result.Message);
@@ -134,14 +157,26 @@ namespace Simmonz.AdminSolution.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int productId)
         {
+            string keyword = null;
+            int pageIndex = 1 ;
+            int pageSize = 10;
+            var requestView = new GetProductPagingRequest()
+            {
+                Keyword = keyword,
+                pageIndex = pageIndex,
+                pageSize = pageSize
+            };
+           
             var result = await _productService.DeleteProduct(productId);
-            if(result.IsSucceed)
+            var model = await _productService.GetAllPaging(requestView);
+            if (result.IsSucceed)
             {
                 TempData["result"] = "Xóa thành công";
-                return RedirectToAction("Index");
+                var ajax = new { html = JsonHelper.RenderRazorViewToString(this, "_ViewAll", model.ResultObject) };
+                return Json(ajax);
             }
             ModelState.AddModelError("", result.Message);
-            return View(result);
+            return View(result.Message);
         }
         private void CategoryDropDownList(object seletedCategory = null)
         {

@@ -451,9 +451,6 @@ C:\Users\Mint\source\repos\SimmonzProject\Simmonz.AdminSolution\obj\Debug\netcor
 C:\Users\Mint\source\repos\Simmonz\Simmonz.AdminSolution\obj\Debug\netcoreapp3.1\Simmonz.AdminSolution.dll
 C:\Users\Mint\source\repos\Simmonz\Simmonz.AdminSolution\obj\Debug\netcoreapp3.1\Simmonz.AdminSolution.pdb
 C:\Users\Mint\source\repos\Simmonz\Simmonz.AdminSolution\obj\Debug\netcoreapp3.1\Simmonz.AdminSolution.csprojAssemblyReference.cache
-C:\Users\Mint\source\repos\Simmonz\Simmonz.AdminSolution\obj\Debug\netcoreapp3.1\Simmonz.AdminSolution.csproj.CoreCompileInputs.cache
-C:\Users\Mint\source\repos\Simmonz\Simmonz.AdminSolution\obj\Debug\netcoreapp3.1\Simmonz.AdminSolution.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Mint\source\repos\Simmonz\Simmonz.AdminSolution\obj\Debug\netcoreapp3.1\Simmonz.AdminSolution.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Mint\source\repos\Simmonz\Simmonz.AdminSolution\obj\Debug\netcoreapp3.1\Simmonz.AdminSolution.RazorAssemblyInfo.cache
 C:\Users\Mint\source\repos\Simmonz\Simmonz.AdminSolution\obj\Debug\netcoreapp3.1\Simmonz.AdminSolution.RazorAssemblyInfo.cs
 C:\Users\Mint\source\repos\Simmonz\Simmonz.AdminSolution\obj\Debug\netcoreapp3.1\Simmonz.AdminSolution.AssemblyInfoInputs.cache
@@ -901,3 +898,17 @@ C:\Users\Mint\source\repos\Simmonz\Simmonz.AdminSolution\obj\Debug\netcoreapp3.1
 C:\Users\Mint\source\repos\Simmonz\Simmonz.AdminSolution\obj\Debug\netcoreapp3.1\Razor\Views\User\Details.cshtml.g.cs
 C:\Users\Mint\source\repos\Simmonz\Simmonz.AdminSolution\obj\Debug\netcoreapp3.1\Razor\Views\User\Update.cshtml.g.cs
 C:\Users\Mint\source\repos\Simmonz\Simmonz.AdminSolution\obj\Debug\netcoreapp3.1\Razor\Views\Order\Index.cshtml.g.cs
+C:\Users\Mint\source\repos\Simmonz\Simmonz.AdminSolution\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Index.cshtml.g.cs
+C:\Users\Mint\source\repos\Simmonz\Simmonz.AdminSolution\obj\Debug\netcoreapp3.1\Razor\Views\Category\Index.cshtml.g.cs
+C:\Users\Mint\source\repos\Simmonz\Simmonz.AdminSolution\obj\Debug\netcoreapp3.1\Razor\Views\Chart\Index.cshtml.g.cs
+C:\Users\Mint\source\repos\Simmonz\Simmonz.AdminSolution\bin\Debug\netcoreapp3.1\FusionCharts.DataEngine.dll
+C:\Users\Mint\source\repos\Simmonz\Simmonz.AdminSolution\bin\Debug\netcoreapp3.1\FusionCharts.Visualization.dll
+C:\Users\Mint\source\repos\Simmonz\Simmonz.AdminSolution\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\Mint\source\repos\Simmonz\Simmonz.AdminSolution\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Mint\source\repos\Simmonz\Simmonz.AdminSolution\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Mint\source\repos\Simmonz\Simmonz.AdminSolution\obj\Debug\netcoreapp3.1\Simmonz.AdminSolution.csproj.CoreCompileInputs.cache
+C:\Users\Mint\source\repos\Simmonz\Simmonz.AdminSolution\obj\Debug\netcoreapp3.1\Simmonz.AdminSolution.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Mint\source\repos\Simmonz\Simmonz.AdminSolution\obj\Debug\netcoreapp3.1\Simmonz.AdminSolution.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Mint\source\repos\Simmonz\Simmonz.AdminSolution\obj\Debug\netcoreapp3.1\Razor\Views\Order\_ViewAll.cshtml.g.cs
+C:\Users\Mint\source\repos\Simmonz\Simmonz.AdminSolution\obj\Debug\netcoreapp3.1\Razor\Views\Order\Details.cshtml.g.cs
+C:\Users\Mint\source\repos\Simmonz\Simmonz.AdminSolution\obj\Debug\netcoreapp3.1\Razor\Views\Order\GetTransaction.cshtml.g.cs

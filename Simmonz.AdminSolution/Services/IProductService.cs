@@ -11,7 +11,8 @@ namespace Simmonz.AdminSolution.Services
     public interface IProductService
     {
         Task<ApiResult<PagedResult<ProductViewModel>>> GetAllPaging(GetProductPagingRequest request);
-        Task<List<ProductViewModel>> GetAll();
+        Task<List<ProductViewModel>> GetAll( );
+        Task<ApiResult<PagedResult<ProductViewModel>>> GetAjax(GetProductPagingRequest request);
 
         Task<ApiResult<bool>> CreateProduct(ProductCreateRequest request,string fileName);
         Task<ApiResult<ProductViewModel>> GetProductById(int productId);

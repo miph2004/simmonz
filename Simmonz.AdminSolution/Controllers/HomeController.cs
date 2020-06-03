@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Simmonz.AdminSolution.Models;
+using Simmonz.Data.EF;
 
 namespace Simmonz.AdminSolution.Controllers
 {
@@ -14,10 +15,11 @@ namespace Simmonz.AdminSolution.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly SimmonzDbContext _context;
+        public HomeController(ILogger<HomeController> logger,SimmonzDbContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
@@ -30,6 +32,7 @@ namespace Simmonz.AdminSolution.Controllers
         {
             return View();
         }
+       
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

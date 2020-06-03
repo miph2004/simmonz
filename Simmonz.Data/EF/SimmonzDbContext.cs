@@ -29,6 +29,7 @@ namespace Simmonz.Data.EF
             modelBuilder.ApplyConfiguration(new AppUserConfiguration());
             modelBuilder.ApplyConfiguration(new ShippingFeeConfiguration());
             modelBuilder.ApplyConfiguration(new TransactionConfiguration());
+            modelBuilder.ApplyConfiguration(new OrderDetailConfiguration());
             //App Userr
             modelBuilder.Entity<IdentityUserClaim<int>>().ToTable("AppUserClaims");
             modelBuilder.Entity<IdentityUserRole<int>>().ToTable("AppUserRoles").HasKey(x => new { x.UserId, x.RoleId });
@@ -42,9 +43,14 @@ namespace Simmonz.Data.EF
         public DbSet<Product> Products { get; set; }
         public DbSet<AppUser> AppUsers { get; set; } 
         public DbSet<AppRole> AppRoles { get; set; }
+        public DbSet<Admin> Admins { get; set; }
+        public DbSet<Client> Clients { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Discount> Discounts { get; set; }
         public DbSet<Order> Orders { get; set; }
+        public DbSet<ShippingFee> ShippingFees { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
 
     }
 }

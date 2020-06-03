@@ -17,10 +17,10 @@ C:\Users\Mint\source\repos\Simmonz\Simmonz.Data\bin\Debug\netcoreapp3.1\Simmonz.
 C:\Users\Mint\source\repos\Simmonz\Simmonz.Data\bin\Debug\netcoreapp3.1\Simmonz.Data.runtimeconfig.dev.json
 C:\Users\Mint\source\repos\Simmonz\Simmonz.Data\bin\Debug\netcoreapp3.1\Simmonz.Data.dll
 C:\Users\Mint\source\repos\Simmonz\Simmonz.Data\bin\Debug\netcoreapp3.1\Simmonz.Data.pdb
-C:\Users\Mint\source\repos\Simmonz\Simmonz.Data\obj\Debug\netcoreapp3.1\Simmonz.Data.csprojAssemblyReference.cache
 C:\Users\Mint\source\repos\Simmonz\Simmonz.Data\obj\Debug\netcoreapp3.1\Simmonz.Data.AssemblyInfoInputs.cache
 C:\Users\Mint\source\repos\Simmonz\Simmonz.Data\obj\Debug\netcoreapp3.1\Simmonz.Data.AssemblyInfo.cs
 C:\Users\Mint\source\repos\Simmonz\Simmonz.Data\obj\Debug\netcoreapp3.1\Simmonz.Data.dll
 C:\Users\Mint\source\repos\Simmonz\Simmonz.Data\obj\Debug\netcoreapp3.1\Simmonz.Data.pdb
 C:\Users\Mint\source\repos\Simmonz\Simmonz.Data\obj\Debug\netcoreapp3.1\Simmonz.Data.genruntimeconfig.cache
 C:\Users\Mint\source\repos\Simmonz\Simmonz.Data\obj\Debug\netcoreapp3.1\Simmonz.Data.csproj.CoreCompileInputs.cache
+C:\Users\Mint\source\repos\Simmonz\Simmonz.Data\obj\Debug\netcoreapp3.1\Simmonz.Data.csprojAssemblyReference.cache

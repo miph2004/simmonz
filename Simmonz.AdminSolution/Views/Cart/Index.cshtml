@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Simmonz.Data.Entities.Cart>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Giỏ hàng</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               Mã
+            </th>
+            <th>
+                Số lượng
+            </th>
+            <th>
+                Tên sản phẩm
+            </th>
+            <th>Tổng tiền</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in ViewBag.cart)
+        {
+            <tr>
+                <td>
+                    @item.Product.Id
+
+                </td>
+                <td>
+                    @item.Quantity
+                </td>
+                <td>
+                    @item.Product.ProductName
+                </td>
+                <td>
+                    @(item.Quantity * item.Product.Price)
+                </td>
+
+
+            </tr>
+        }
+    <tr>
+        <td align="right" colspan="6">Sum @ViewBag.total</td>
+        <td>
+            
+        </td>
+    </tr>
+       
+    </tbody>
+</table>
+

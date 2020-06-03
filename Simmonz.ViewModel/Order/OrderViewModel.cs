@@ -12,6 +12,8 @@ namespace Simmonz.ViewModel.Order
         public float Discount { get; set; }
         public int Status { get; set; }
         public int ProductId { get; set; }
+        public string ProductName { get; set; }
         public int TransactionId { get; set; }
+        public DateTime CreatedDate { get; set; }
     }
 }

@@ -336,11 +336,11 @@ namespace Simmonz.Data.Migrations
                     b.Property<float>("Amount")
                         .HasColumnType("float");
 
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime");
+
                     b.Property<float>("Discount")
                         .HasColumnType("float");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
@@ -355,11 +355,33 @@ namespace Simmonz.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ProductId");
-
                     b.HasIndex("TransactionId");
 
                     b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("Simmonz.Data.Entities.OrderDetail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int?>("OrderId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("OrderDetails");
                 });
 
             modelBuilder.Entity("Simmonz.Data.Entities.Product", b =>
@@ -449,6 +471,9 @@ namespace Simmonz.Data.Migrations
                     b.Property<int>("ClientId")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime");
+
                     b.Property<string>("Message")
                         .HasColumnType("text");
 
@@ -498,17 +523,22 @@ namespace Simmonz.Data.Migrations
 
             modelBuilder.Entity("Simmonz.Data.Entities.Order", b =>
                 {
-                    b.HasOne("Simmonz.Data.Entities.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Simmonz.Data.Entities.Transaction", "Transaction")
                         .WithMany()
                         .HasForeignKey("TransactionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Simmonz.Data.Entities.OrderDetail", b =>
+                {
+                    b.HasOne("Simmonz.Data.Entities.Order", "Order")
+                        .WithMany()
+                        .HasForeignKey("OrderId");
+
+                    b.HasOne("Simmonz.Data.Entities.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId");
                 });
 
             modelBuilder.Entity("Simmonz.Data.Entities.Product", b =>

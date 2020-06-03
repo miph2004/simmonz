@@ -1,75 +1,126 @@
 ﻿@using Simmonz.ViewModel.Common;
 @model PagedResult<Simmonz.ViewModel.Product.ProductViewModel>
-<div class="table-responsive">
-    <table class="table table-bordered">
-        <thead>
-
-            <tr>
-                <th>
-                    ID
-                </th>
-                <th>
-                    Tên
-                </th>
-                <th>
-                    Danh mục
-                </th>
-                <th>
-                    Hình ảnh
-                </th>
-                <th>
-                    Gía
-                </th>
-                <th>
-                    Số lượng
-                </th>
-                <th>
-                    Mô tả
-                </th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model.Items)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Id)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.ProductName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.CategoryName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Image)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Price)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Quantity)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Description)
-                    </td>
-                    <td>
-                        <a onclick="showInPopUp('@Url.Action("Update","Product",new { productId=item.Id},Context.Request.Scheme)',' Cập nhật')" class="btn btn-outline-info">
-                            Cập nhật
+    <div class="container-fluid">
+        <h1 class="mt-4">Danh sách sản phẩm </h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+            <li class="breadcrumb-item active">Danh sách sản phẩm</li>
+        </ol>
+        <div class="card mb-4">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                        <a onclick="showInPopUp('@Url.Action("Create","Product",null,Context.Request.Scheme)','Thêm sản phẩm mới')" class="btn btn-outline-dark">
+                            Tạo sản phẩm mới
                         </a>
-                        <a onclick="showInPopUp('@Url.Action("Details","Product",new { productId=item.Id},Context.Request.Scheme)',' Chi tiết sản phẩm')" class="btn btn-outline-light">
-                            Chi tiết
-                        </a>
-                        <form asp-action="Delete" asp-route-productId="@item.Id" class="d-inline" onsubmit="return jQueryAjaxDelete(this)">
-                            <input type="submit" value="Xóa" class="btn btn-danger" />
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                        <form asp-action="Index" method="get">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <input type="search" class="search form-control" id="searchfor" placeholder="Tìm kiếm" />
+                                </div>
+                                <div class="cold-md-3">
+                                    <button type="button" onclick="window.location.href='/Product/Index'" class="btn btn-outline-secondary">Reset</button>
+                                </div>
+                            </div>
                         </form>
-                    </td>
-                </tr>
-            }
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    @if (ViewBag.SuccessMsg != null)
+                    {
+                        <div id="msgAlert" class="alert alert-success" role="alert">
+                            @ViewBag.SuccessMsg
+                        </div>
+                    }
+                </div>
+                <div class="table-responsive">
 
-        </tbody>
+                    <table id="tableProduct" class="table table-bordered">
+                        <thead>
 
-    </table>
-</div>
+                            <tr>
+                                <th>
+                                    ID
+                                </th>
+                                <th>
+                                    Tên
+                                </th>
+                                <th>
+                                    Danh mục
+                                </th>
+                                <th>
+                                    Hình ảnh
+                                </th>
+                                <th>
+                                    Gía
+                                </th>
+                                <th>
+                                    Số lượng
+                                </th>
+                                <th>
+                                    Mô tả
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Items)
+                            {
+                                var imagePath = "/img/" + (item.Image);
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Id)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ProductName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CategoryName)
+                                    </td>
+                                    <td>
+                                        <img id="img" src="@imagePath" />
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Price)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Quantity)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Description)
+                                    </td>
+                                    <td>
+                                        <a onclick="showInPopUp('@Url.Action("Update","Product",new { productId=item.Id},Context.Request.Scheme)',' Cập nhật')" class="btn btn-outline-info">
+                                            Cập nhật
+                                        </a>
+                                        <a onclick="showInPopUp('@Url.Action("Details","Product",new { productId=item.Id},Context.Request.Scheme)',' Chi tiết sản phẩm')" class="btn btn-outline-info">
+                                            Chi tiết
+                                        </a>
+                                        <form  asp-action="Delete" asp-route-productId="@item.Id" onsubmit="return jQueryAjaxDelete(this)" class="d-inline"  >
+                                            <input type="submit" value="Xóa" class="btn btn-danger"/>
+                                        </form>
+                                        @*test for client web*@
+                                        @*<form asp-action="buy" asp-route-id="@item.Id" asp-controller="Cart" class="d-inline" onsubmit="return jQueryAjaxCart(this)">
+                                            <input type="submit" value="Add" class="btn btn-danger" />
+                                        </form>*@
+                                    </td>
+                                </tr>
+                            }
 
+                        </tbody>
+
+                    </table>
+                </div>
+                @await Component.InvokeAsync("Pager", Model)
+            </div>
+        </div>
+    </div>
+    <style type="text/css">
+        #img {
+            width: 50px;
+        }
+    </style>
