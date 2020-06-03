@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Mint\\.nuget\\packages\\": {}
+    "C:\\Users\\DELL\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mint\\Source\\Repos\\Simmonz\\Simmonz\\Simmonz.csproj",
+      "projectUniqueName": "D:\\Dev\\SimmonzClone\\Simmonz\\Simmonz.csproj",
       "projectName": "Simmonz",
-      "projectPath": "C:\\Users\\Mint\\Source\\Repos\\Simmonz\\Simmonz\\Simmonz.csproj",
-      "packagesPath": "C:\\Users\\Mint\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mint\\Source\\Repos\\Simmonz\\Simmonz\\obj\\",
+      "projectPath": "D:\\Dev\\SimmonzClone\\Simmonz\\Simmonz.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "D:\\Dev\\SimmonzClone\\Simmonz\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Mint\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

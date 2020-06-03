@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Simmonz",
+    "\\Simmonz\\Views",
+    "\\Simmonz\\Views\\Home",
+    "\\Simmonz\\Views\\Shared"
   ],
-  "SelectedNode": "\\Simmonz.sln",
+  "SelectedNode": "\\Simmonz\\Views\\Home\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

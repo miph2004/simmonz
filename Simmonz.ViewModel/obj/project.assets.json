@@ -700,19 +700,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mint\\.nuget\\packages\\": {}
+    "C:\\Users\\DELL\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mint\\source\\repos\\Simmonz\\Simmonz.ViewModel\\Simmonz.ViewModel.csproj",
+      "projectUniqueName": "D:\\Dev\\SimmonzClone\\Simmonz.ViewModel\\Simmonz.ViewModel.csproj",
       "projectName": "Simmonz.ViewModel",
-      "projectPath": "C:\\Users\\Mint\\source\\repos\\Simmonz\\Simmonz.ViewModel\\Simmonz.ViewModel.csproj",
-      "packagesPath": "C:\\Users\\Mint\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mint\\source\\repos\\Simmonz\\Simmonz.ViewModel\\obj\\",
+      "projectPath": "D:\\Dev\\SimmonzClone\\Simmonz.ViewModel\\Simmonz.ViewModel.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "D:\\Dev\\SimmonzClone\\Simmonz.ViewModel\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Mint\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

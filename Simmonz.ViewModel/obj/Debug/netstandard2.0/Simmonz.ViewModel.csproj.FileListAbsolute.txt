@@ -16,3 +16,12 @@ C:\Users\Mint\source\repos\Simmonz\Simmonz.ViewModel\obj\Debug\netstandard2.0\Si
 C:\Users\Mint\source\repos\Simmonz\Simmonz.ViewModel\obj\Debug\netstandard2.0\Simmonz.ViewModel.dll
 C:\Users\Mint\source\repos\Simmonz\Simmonz.ViewModel\obj\Debug\netstandard2.0\Simmonz.ViewModel.pdb
 C:\Users\Mint\source\repos\Simmonz\Simmonz.ViewModel\obj\Debug\netstandard2.0\Simmonz.ViewModel.csproj.CoreCompileInputs.cache
+D:\Dev\SimmonzClone\Simmonz.ViewModel\bin\Debug\netstandard2.0\Simmonz.ViewModel.deps.json
+D:\Dev\SimmonzClone\Simmonz.ViewModel\bin\Debug\netstandard2.0\Simmonz.ViewModel.dll
+D:\Dev\SimmonzClone\Simmonz.ViewModel\bin\Debug\netstandard2.0\Simmonz.ViewModel.pdb
+D:\Dev\SimmonzClone\Simmonz.ViewModel\obj\Debug\netstandard2.0\Simmonz.ViewModel.csprojAssemblyReference.cache
+D:\Dev\SimmonzClone\Simmonz.ViewModel\obj\Debug\netstandard2.0\Simmonz.ViewModel.csproj.CoreCompileInputs.cache
+D:\Dev\SimmonzClone\Simmonz.ViewModel\obj\Debug\netstandard2.0\Simmonz.ViewModel.AssemblyInfoInputs.cache
+D:\Dev\SimmonzClone\Simmonz.ViewModel\obj\Debug\netstandard2.0\Simmonz.ViewModel.AssemblyInfo.cs
+D:\Dev\SimmonzClone\Simmonz.ViewModel\obj\Debug\netstandard2.0\Simmonz.ViewModel.dll
+D:\Dev\SimmonzClone\Simmonz.ViewModel\obj\Debug\netstandard2.0\Simmonz.ViewModel.pdb
