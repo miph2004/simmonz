@@ -700,19 +700,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DELL\\.nuget\\packages\\": {}
+    "C:\\Users\\Mint\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Dev\\SimmonzClone\\Simmonz.ViewModel\\Simmonz.ViewModel.csproj",
+      "projectUniqueName": "C:\\Hoc ky 2\\Đồ án C#\\Backup\\SimmonzWebsite\\Simmonz.ViewModel\\Simmonz.ViewModel.csproj",
       "projectName": "Simmonz.ViewModel",
-      "projectPath": "D:\\Dev\\SimmonzClone\\Simmonz.ViewModel\\Simmonz.ViewModel.csproj",
-      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "D:\\Dev\\SimmonzClone\\Simmonz.ViewModel\\obj\\",
+      "projectPath": "C:\\Hoc ky 2\\Đồ án C#\\Backup\\SimmonzWebsite\\Simmonz.ViewModel\\Simmonz.ViewModel.csproj",
+      "packagesPath": "C:\\Users\\Mint\\.nuget\\packages\\",
+      "outputPath": "C:\\Hoc ky 2\\Đồ án C#\\Backup\\SimmonzWebsite\\Simmonz.ViewModel\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Mint\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -11,7 +11,7 @@ namespace Simmonz.ViewModel.Transaction
         public string AddressNumber { get; set; }
         public string AddressStreet { get; set; }
         public string AddressDistrict { get; set; }
-        public float Amount { get; set; }
+        public decimal Amount { get; set; }
         public string Message { get; set; }
         public int Status { get; set; }
         public int ShippingFeeId { get; set; }

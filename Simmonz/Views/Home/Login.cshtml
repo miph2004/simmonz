@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model Simmonz.ViewModel.User.LoginRequest
+<!DOCTYPE html>
 <html lang="zxx">
 
 <head>
@@ -55,20 +56,31 @@
                 <div class="col-lg-6 offset-lg-3">
                     <div class="login-form">
                         <h2>Login</h2>
-                        <form action="#">
+                        @if(@ViewBag.registered!=null)
+                        {
+                        <p id="alert" class="text-success">@ViewBag.registered <i class="far fa-check-circle"></i></p>
+                        }
+
+                        @section Scripts{
+                            <script>
+                                //AlertBox
+                                $('#alert').delay(2000).slideUp(500);
+                            </script>
+                        }
+                        <form asp-action="Login" method="post" asp-controller="Home">
                             <div class="group-input">
                                 <label for="username">Username or email address *</label>
-                                <input type="text" id="username">
+                                <input asp-for="UserName" type="text" id="username">
                             </div>
                             <div class="group-input">
                                 <label for="pass">Password *</label>
-                                <input type="text" id="pass">
+                                <input asp-for="Password" type="password" id="pass">
                             </div>
                             <div class="group-input gi-check">
                                 <div class="gi-more">
                                     <label for="save-pass">
                                         Save Password
-                                        <input type="checkbox" id="save-pass">
+                                        <input asp-for="RememberMe" type="checkbox" id="save-pass">
                                         <span class="checkmark"></span>
                                     </label>
                                     <a href="#" class="forget-pass">Forget your Password</a>

@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model Simmonz.ViewModel.Product.ProductViewModel
+<!DOCTYPE html>
 <html lang="zxx">
 
 <head>
@@ -180,7 +181,10 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="product-pic-zoom">
-                                <img class="product-big-img" src="~/img/product-single/product-1.jpg" alt="">
+                                @{
+                                    var imgPath = "/image/img/" + @Model.Image;
+                                }
+                                <img class="product-big-img" src="@imgPath" alt="">
                                 <div class="zoom-icon">
                                     <i class="fa fa-search-plus"></i>
                                 </div>
@@ -205,8 +209,8 @@
                         <div class="col-lg-6">
                             <div class="product-details">
                                 <div class="pd-title">
-                                    <span>oranges</span>
-                                    <h3>Pure Pineapple</h3>
+                                    <span>  @Html.DisplayFor(model => model.CategoryName)</span>
+                                    <h3>  @Html.DisplayFor(model => model.ProductName)</h3>
                                     <a href="#" class="heart-icon"><i class="icon_heart_alt"></i></a>
                                 </div>
                                 <div class="pd-rating">
@@ -219,10 +223,9 @@
                                 </div>
                                 <div class="pd-desc">
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur ing elit, sed do eiusmod tempor sum dolor
-                                        sit amet, consectetur adipisicing elit, sed do mod tempor
+                                        @Html.DisplayFor(model => model.Description)
                                     </p>
-                                    <h4>$495.00 <span>629.99</span></h4>
+                                    <h4>  $ @Html.DisplayFor(model => model.Price) <span>629.99</span></h4>
                                 </div>
                                 <div class="pd-color">
                                     <h6>Color</h6>
@@ -259,18 +262,22 @@
                                         <label for="xl-size">xs</label>
                                     </div>
                                 </div>
-                                <div class="quantity">
-                                    <div class="pro-qty">
-                                        <input type="text" value="1">
+                                <form asp-action="addtocart" asp-controller="Home" asp-route-productId="@Model.Id" method="post">
+                                    <div class="quantity">
+                                        <div class="pro-qty">
+                                            <input type="text" name="quantity" value="1">
+                                            <input type="hidden" name="productId" asp-for="@Model.Id" >
+                                        </div>
+                                        <button type="submit" class="primary-btn pd-cart">Add To Cart</button>
                                     </div>
-                                    <a href="#" class="primary-btn pd-cart">Add To Cart</a>
-                                </div>
+                                </form>
+                               
                                 <ul class="pd-tags">
-                                    <li><span>CATEGORIES</span>: More Accessories, Wallets & Cases</li>
+                                    <li><span>CATEGORIES</span>:   @Html.DisplayFor(model => model.CategoryName)</li>
                                     <li><span>TAGS</span>: Clothing, T-shirt, Woman</li>
                                 </ul>
                                 <div class="pd-share">
-                                    <div class="p-code">Sku : 00012</div>
+                                    <div class="p-code"> ID : Sku @Html.DisplayFor(model => model.Id)</div>
                                     <div class="pd-social">
                                         <a href="#"><i class="ti-facebook"></i></a>
                                         <a href="#"><i class="ti-twitter-alt"></i></a>

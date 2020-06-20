@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Dev\\SimmonzClone\\Simmonz.Data\\Simmonz.Data.csproj": {}
+    "C:\\Hoc ky 2\\Đồ án C#\\Backup\\SimmonzWebsite\\Simmonz.Data\\Simmonz.Data.csproj": {}
   },
   "projects": {
-    "D:\\Dev\\SimmonzClone\\Simmonz.Data\\Simmonz.Data.csproj": {
+    "C:\\Hoc ky 2\\Đồ án C#\\Backup\\SimmonzWebsite\\Simmonz.Data\\Simmonz.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev\\SimmonzClone\\Simmonz.Data\\Simmonz.Data.csproj",
+        "projectUniqueName": "C:\\Hoc ky 2\\Đồ án C#\\Backup\\SimmonzWebsite\\Simmonz.Data\\Simmonz.Data.csproj",
         "projectName": "Simmonz.Data",
-        "projectPath": "D:\\Dev\\SimmonzClone\\Simmonz.Data\\Simmonz.Data.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev\\SimmonzClone\\Simmonz.Data\\obj\\",
+        "projectPath": "C:\\Hoc ky 2\\Đồ án C#\\Backup\\SimmonzWebsite\\Simmonz.Data\\Simmonz.Data.csproj",
+        "packagesPath": "C:\\Users\\Mint\\.nuget\\packages\\",
+        "outputPath": "C:\\Hoc ky 2\\Đồ án C#\\Backup\\SimmonzWebsite\\Simmonz.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mint\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

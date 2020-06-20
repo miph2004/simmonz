@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model Simmonz.ViewModel.User.RegisterRequest
+<!DOCTYPE html>
 <html lang="zxx">
 
 <head>
@@ -55,18 +56,38 @@
                 <div class="col-lg-6 offset-lg-3">
                     <div class="register-form">
                         <h2>Register</h2>
-                        <form action="#">
+                        <form asp-action="Register" asp-controller="Home" method="post">
                             <div class="group-input">
-                                <label for="username">Username or email address *</label>
-                                <input type="text" id="username">
+                                <label for="username">First Name *</label>
+                                <input required="required" asp-for="FirstName" type="text" id="username">
+                            </div>
+                            <div class="group-input">
+                                <label for="username">Last Name </label>
+                                <input required="required" asp-for="LastName" type="text" id="username">
+                            </div>
+                            <div class="group-input">
+                                <label for="username">Email </label>
+                                <input required="required" asp-for="Email" type="text" id="username">
+                            </div>
+                            <div class="group-input">
+                                <label for="username">Day Of Birth </label>
+                                <input required="required" asp-for="DayOfBirth" type="date" id="username">
+                            </div>
+                            <div class="group-input">
+                                <label for="username">Phone Number </label>
+                                <input required="required" asp-for="PhoneNumber" type="text" id="username">
+                            </div>
+                            <div class="group-input">
+                                <label for="username">Username *</label>
+                                <input required="required" asp-for="UserName" type="text" id="username">
                             </div>
                             <div class="group-input">
                                 <label for="pass">Password *</label>
-                                <input type="text" id="pass">
+                                <input asp-for="Password" required="required" type="password" id="pass">
                             </div>
                             <div class="group-input">
                                 <label for="con-pass">Confirm Password *</label>
-                                <input type="text" id="con-pass">
+                                <input asp-for="ConfirmPassWord" required="required" type="password" id="con-pass">
                             </div>
                             <button type="submit" class="site-btn register-btn">REGISTER</button>
                         </form>

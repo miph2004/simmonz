@@ -25,3 +25,12 @@ D:\Dev\SimmonzClone\Simmonz.ViewModel\obj\Debug\netstandard2.0\Simmonz.ViewModel
 D:\Dev\SimmonzClone\Simmonz.ViewModel\obj\Debug\netstandard2.0\Simmonz.ViewModel.AssemblyInfo.cs
 D:\Dev\SimmonzClone\Simmonz.ViewModel\obj\Debug\netstandard2.0\Simmonz.ViewModel.dll
 D:\Dev\SimmonzClone\Simmonz.ViewModel\obj\Debug\netstandard2.0\Simmonz.ViewModel.pdb
+C:\Hoc ky 2\Đồ án C#\Backup\SimmonzWebsite\Simmonz.ViewModel\bin\Debug\netstandard2.0\Simmonz.ViewModel.deps.json
+C:\Hoc ky 2\Đồ án C#\Backup\SimmonzWebsite\Simmonz.ViewModel\bin\Debug\netstandard2.0\Simmonz.ViewModel.dll
+C:\Hoc ky 2\Đồ án C#\Backup\SimmonzWebsite\Simmonz.ViewModel\bin\Debug\netstandard2.0\Simmonz.ViewModel.pdb
+C:\Hoc ky 2\Đồ án C#\Backup\SimmonzWebsite\Simmonz.ViewModel\obj\Debug\netstandard2.0\Simmonz.ViewModel.csprojAssemblyReference.cache
+C:\Hoc ky 2\Đồ án C#\Backup\SimmonzWebsite\Simmonz.ViewModel\obj\Debug\netstandard2.0\Simmonz.ViewModel.csproj.CoreCompileInputs.cache
+C:\Hoc ky 2\Đồ án C#\Backup\SimmonzWebsite\Simmonz.ViewModel\obj\Debug\netstandard2.0\Simmonz.ViewModel.AssemblyInfoInputs.cache
+C:\Hoc ky 2\Đồ án C#\Backup\SimmonzWebsite\Simmonz.ViewModel\obj\Debug\netstandard2.0\Simmonz.ViewModel.AssemblyInfo.cs
+C:\Hoc ky 2\Đồ án C#\Backup\SimmonzWebsite\Simmonz.ViewModel\obj\Debug\netstandard2.0\Simmonz.ViewModel.dll
+C:\Hoc ky 2\Đồ án C#\Backup\SimmonzWebsite\Simmonz.ViewModel\obj\Debug\netstandard2.0\Simmonz.ViewModel.pdb

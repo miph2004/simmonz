@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Simmonz.ViewModel.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,5 +27,6 @@ namespace Simmonz.ViewModel.Product
         [DisplayName("Mô tả")]
         public string Description { get; set; }
         public int DiscountId { get; set; }
+        public List<ProductViewModel> Product { get; set; }
     }
 }

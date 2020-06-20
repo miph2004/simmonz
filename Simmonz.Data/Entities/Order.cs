@@ -7,7 +7,7 @@ namespace Simmonz.Data.Entities
     public class Order
     {
         public int Id { get; set; }
-        public float Amount { get; set; }
+        public decimal Amount { get; set; }
         public int Quantity { get; set; }
         public float Discount { get; set; }
         public int Status { get; set; }

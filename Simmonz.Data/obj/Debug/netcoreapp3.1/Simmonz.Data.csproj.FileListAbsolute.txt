@@ -37,3 +37,16 @@ D:\Dev\SimmonzClone\Simmonz.Data\obj\Debug\netcoreapp3.1\Simmonz.Data.AssemblyIn
 D:\Dev\SimmonzClone\Simmonz.Data\obj\Debug\netcoreapp3.1\Simmonz.Data.dll
 D:\Dev\SimmonzClone\Simmonz.Data\obj\Debug\netcoreapp3.1\Simmonz.Data.pdb
 D:\Dev\SimmonzClone\Simmonz.Data\obj\Debug\netcoreapp3.1\Simmonz.Data.genruntimeconfig.cache
+C:\Hoc ky 2\Đồ án C#\Backup\SimmonzWebsite\Simmonz.Data\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Hoc ky 2\Đồ án C#\Backup\SimmonzWebsite\Simmonz.Data\bin\Debug\netcoreapp3.1\Simmonz.Data.deps.json
+C:\Hoc ky 2\Đồ án C#\Backup\SimmonzWebsite\Simmonz.Data\bin\Debug\netcoreapp3.1\Simmonz.Data.runtimeconfig.json
+C:\Hoc ky 2\Đồ án C#\Backup\SimmonzWebsite\Simmonz.Data\bin\Debug\netcoreapp3.1\Simmonz.Data.runtimeconfig.dev.json
+C:\Hoc ky 2\Đồ án C#\Backup\SimmonzWebsite\Simmonz.Data\bin\Debug\netcoreapp3.1\Simmonz.Data.dll
+C:\Hoc ky 2\Đồ án C#\Backup\SimmonzWebsite\Simmonz.Data\bin\Debug\netcoreapp3.1\Simmonz.Data.pdb
+C:\Hoc ky 2\Đồ án C#\Backup\SimmonzWebsite\Simmonz.Data\obj\Debug\netcoreapp3.1\Simmonz.Data.csprojAssemblyReference.cache
+C:\Hoc ky 2\Đồ án C#\Backup\SimmonzWebsite\Simmonz.Data\obj\Debug\netcoreapp3.1\Simmonz.Data.csproj.CoreCompileInputs.cache
+C:\Hoc ky 2\Đồ án C#\Backup\SimmonzWebsite\Simmonz.Data\obj\Debug\netcoreapp3.1\Simmonz.Data.AssemblyInfoInputs.cache
+C:\Hoc ky 2\Đồ án C#\Backup\SimmonzWebsite\Simmonz.Data\obj\Debug\netcoreapp3.1\Simmonz.Data.AssemblyInfo.cs
+C:\Hoc ky 2\Đồ án C#\Backup\SimmonzWebsite\Simmonz.Data\obj\Debug\netcoreapp3.1\Simmonz.Data.dll
+C:\Hoc ky 2\Đồ án C#\Backup\SimmonzWebsite\Simmonz.Data\obj\Debug\netcoreapp3.1\Simmonz.Data.pdb
+C:\Hoc ky 2\Đồ án C#\Backup\SimmonzWebsite\Simmonz.Data\obj\Debug\netcoreapp3.1\Simmonz.Data.genruntimeconfig.cache

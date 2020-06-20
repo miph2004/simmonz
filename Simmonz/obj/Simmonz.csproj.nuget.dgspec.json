@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Dev\\SimmonzClone\\Simmonz\\Simmonz.csproj": {}
+    "C:\\Hoc ky 2\\Đồ án C#\\Backup\\SimmonzWebsite\\Simmonz\\Simmonz.csproj": {}
   },
   "projects": {
-    "D:\\Dev\\SimmonzClone\\Simmonz\\Simmonz.csproj": {
+    "C:\\Hoc ky 2\\Đồ án C#\\Backup\\SimmonzWebsite\\Simmonz.Data\\Simmonz.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev\\SimmonzClone\\Simmonz\\Simmonz.csproj",
-        "projectName": "Simmonz",
-        "projectPath": "D:\\Dev\\SimmonzClone\\Simmonz\\Simmonz.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev\\SimmonzClone\\Simmonz\\obj\\",
+        "projectUniqueName": "C:\\Hoc ky 2\\Đồ án C#\\Backup\\SimmonzWebsite\\Simmonz.Data\\Simmonz.Data.csproj",
+        "projectName": "Simmonz.Data",
+        "projectPath": "C:\\Hoc ky 2\\Đồ án C#\\Backup\\SimmonzWebsite\\Simmonz.Data\\Simmonz.Data.csproj",
+        "packagesPath": "C:\\Users\\Mint\\.nuget\\packages\\",
+        "outputPath": "C:\\Hoc ky 2\\Đồ án C#\\Backup\\SimmonzWebsite\\Simmonz.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mint\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -37,6 +37,180 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "FusionCharts.Visualization": {
+              "target": "Package",
+              "version": "[1.0.7, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "MySql.Data.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.20, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Hoc ky 2\\Đồ án C#\\Backup\\SimmonzWebsite\\Simmonz.ViewModel\\Simmonz.ViewModel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Hoc ky 2\\Đồ án C#\\Backup\\SimmonzWebsite\\Simmonz.ViewModel\\Simmonz.ViewModel.csproj",
+        "projectName": "Simmonz.ViewModel",
+        "projectPath": "C:\\Hoc ky 2\\Đồ án C#\\Backup\\SimmonzWebsite\\Simmonz.ViewModel\\Simmonz.ViewModel.csproj",
+        "packagesPath": "C:\\Users\\Mint\\.nuget\\packages\\",
+        "outputPath": "C:\\Hoc ky 2\\Đồ án C#\\Backup\\SimmonzWebsite\\Simmonz.ViewModel\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mint\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Hoc ky 2\\Đồ án C#\\Backup\\SimmonzWebsite\\Simmonz\\Simmonz.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Hoc ky 2\\Đồ án C#\\Backup\\SimmonzWebsite\\Simmonz\\Simmonz.csproj",
+        "projectName": "Simmonz",
+        "projectPath": "C:\\Hoc ky 2\\Đồ án C#\\Backup\\SimmonzWebsite\\Simmonz\\Simmonz.csproj",
+        "packagesPath": "C:\\Users\\Mint\\.nuget\\packages\\",
+        "outputPath": "C:\\Hoc ky 2\\Đồ án C#\\Backup\\SimmonzWebsite\\Simmonz\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mint\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Hoc ky 2\\Đồ án C#\\Backup\\SimmonzWebsite\\Simmonz.Data\\Simmonz.Data.csproj": {
+                "projectPath": "C:\\Hoc ky 2\\Đồ án C#\\Backup\\SimmonzWebsite\\Simmonz.Data\\Simmonz.Data.csproj"
+              },
+              "C:\\Hoc ky 2\\Đồ án C#\\Backup\\SimmonzWebsite\\Simmonz.ViewModel\\Simmonz.ViewModel.csproj": {
+                "projectPath": "C:\\Hoc ky 2\\Đồ án C#\\Backup\\SimmonzWebsite\\Simmonz.ViewModel\\Simmonz.ViewModel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.6.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
